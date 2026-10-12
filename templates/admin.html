@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="navbar">
+    <div class="logo">👨‍💼 Admin Panel</div>
+    <div class="nav-links">
+        <a href="/menu">Menu</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2>All Orders</h2>
+
+    {% for order in orders %}
+    <div class="card">
+        <div class="card-body">
+            <h3>Order #{{ order.id }}</h3>
+            <p>User ID: {{ order.user_id }}</p>
+            <p>Total: ₹{{ order.total }}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>

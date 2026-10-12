@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="navbar">
+    <div class="logo">Foodie</div>
+
+    <form class="search-box" method="GET" action="/menu">
+        <input type="text" name="search" placeholder="Search food...">
+    </form>
+
+    <div class="nav-links">
+        <a href="/orders">Orders</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="grid">
+        {% for product in products %}
+        <div class="card">
+
+            <!-- Food Image -->
+            <img src="{{ url_for('static', filename='upload/' + product.image) }}" alt="{{product.name}}">"
+            <div class="card-body">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+
+                <!-- Rating -->
+                <div class="rating">⭐ 4.5 • 30 mins</div>
+
+                <p class="price">₹{{ product.price }}</p>
+
+                <a href="/add_to_cart/{{ product.id }}" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Floating Cart Button -->
+<a href="/cart" class="cart-float">🛒 Cart</a>

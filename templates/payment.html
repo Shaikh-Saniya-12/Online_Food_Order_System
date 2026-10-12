@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container" style="max-width:400px; margin:auto;">
+
+<div class="card">
+<div class="card-body">
+
+<h2>Payment 💳</h2>
+
+<form method="POST" action="/payment_success">
+
+    <p>Select Payment Method:</p>
+
+    <label><input type="radio" name="payment_method" checked> UPI</label><br><br>
+    <label><input type="radio" name="payment_method"> Debit/Credit Card</label><br><br>
+    <label><input type="radio" name="payment_method"> Cash on Delivery</label><br><br>
+
+    <hr>
+
+    <p><b>Demo Payment (No real money)</b></p>
+
+    <input type="text" placeholder="Card / UPI ID" required
+    style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;"><br><br>
+
+    <button class="btn">Pay Now</button>
+
+</form>
+
+</div>
+</div>
+
+</div>
