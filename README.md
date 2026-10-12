@@ -77,13 +77,13 @@ online-food-order-system/
    Open `http://127.0.0.1:5000` in your browser.
 
 ## Screenshots
-![home page](home.png)
-![Registration](register.png)
-![Login](login.png)
-![Menu](menu1.png)
-![Cart](cart.png)
-![Payment](payment.png)
-![Orders](my_order.png)
+![Home page](Screenshots/home.png)
+![Registration](Screenshots/register.png)
+![Login](Screenshots/login.png)
+![Menu](Screenshots/menu1.png)
+![Cart](Screenshots/cart.png)
+![Payment](Screenshots/payment.png)
+![Orders](Screenshots/my_order.png)
 
 ## Future Improvements
 
