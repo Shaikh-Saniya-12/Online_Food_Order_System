@@ -87,7 +87,6 @@ online-food-order-system/
 
 ## Future Improvements
 
-- User login and registration
 - Admin panel to manage menu items
 - Order tracking and history
 - Sales analytics dashboard
